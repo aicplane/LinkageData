@@ -2,7 +2,7 @@
 % Please edit documentation in R/LaodData.R
 \name{BreastCancerRNA}
 \alias{BreastCancerRNA}
-\title{Laod TCGA Breast Cancer RNA-seq expression matrix.}
+\title{Load TCGA Breast Cancer RNA-seq expression matrix.}
 \usage{
 BreastCancerRNA()
 }
@@ -10,7 +10,7 @@ BreastCancerRNA()
 RNA-seq count
 }
 \description{
-Laod TCGA Breast Cancer RNA-seq expression matrix.
+Load TCGA Breast Cancer RNA-seq expression matrix.
 }
 \examples{
 library(LinkageData)

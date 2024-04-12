@@ -2,7 +2,7 @@
 % Please edit documentation in R/LaodData.R
 \name{MuSCsATAC}
 \alias{MuSCsATAC}
-\title{Laod MuSC ATAC-seq expression matrix.}
+\title{Load MuSC ATAC-seq expression matrix.}
 \usage{
 MuSCsATAC()
 }
@@ -10,7 +10,7 @@ MuSCsATAC()
 ATAC-seq count
 }
 \description{
-Laod MuSC ATAC-seq expression matrix.
+Load MuSC ATAC-seq expression matrix.
 }
 \examples{
 library(LinkageData)

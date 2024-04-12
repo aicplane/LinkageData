@@ -2,7 +2,7 @@
 % Please edit documentation in R/LaodData.R
 \name{MuSCsRNA}
 \alias{MuSCsRNA}
-\title{Laod MuSC RNA-seq expression matrix.}
+\title{Load MuSC RNA-seq expression matrix.}
 \usage{
 MuSCsRNA()
 }
@@ -10,7 +10,7 @@ MuSCsRNA()
 RNA-seq count
 }
 \description{
-Laod MuSC RNA-seq expression matrix.
+Load MuSC RNA-seq expression matrix.
 }
 \examples{
 library(LinkageData)

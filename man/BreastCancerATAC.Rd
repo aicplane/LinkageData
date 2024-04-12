@@ -2,7 +2,7 @@
 % Please edit documentation in R/LaodData.R
 \name{BreastCancerATAC}
 \alias{BreastCancerATAC}
-\title{Laod TCGA Breast Cancer ATAC-seq expression matrix.}
+\title{Load TCGA Breast Cancer ATAC-seq expression matrix.}
 \usage{
 BreastCancerATAC()
 }
@@ -10,7 +10,7 @@ BreastCancerATAC()
 ATAC-seq count
 }
 \description{
-Laod TCGA Breast Cancer ATAC-seq expression matrix.
+Load TCGA Breast Cancer ATAC-seq expression matrix.
 }
 \examples{
 library(LinkageData)
