@@ -1,4 +1,4 @@
-#' Laod TCGA Breast Cancer ATAC-seq expression matrix.
+#' Load TCGA Breast Cancer ATAC-seq expression matrix.
 #'
 #' @return ATAC-seq count
 #' @export
@@ -7,16 +7,18 @@
 #' library(LinkageData)
 #' BreastCancerATAC()
 BreastCancerATAC <- function(){
-  txt_files <- list.files("data/Homo.ATAC/",pattern = "\\.RData$")
-  data_list <- lapply(txt_files, function(file) {
-    load(paste0("data/Homo.ATAC/", file))
+  dir <- system.file("extdata","Homo.ATAC",package = "LinkageData")
+  txt_files <- list.files(dir,pattern = "\\.rdata$")
+  path <- file.path(dir,txt_files)
+  data_list <- lapply(path, function(file) {
+    load(file)
     data
   })
   ATAC <- do.call(rbind, data_list)
   return(ATAC)
 }
 
-#' Laod MuSC ATAC-seq expression matrix.
+#' Load MuSC ATAC-seq expression matrix.
 #'
 #' @return ATAC-seq count
 #' @export
@@ -25,16 +27,18 @@ BreastCancerATAC <- function(){
 #' library(LinkageData)
 #' MuSCsATAC()
 MuSCsATAC <- function(){
-  txt_files <- list.files("data/Mus.ATAC/",pattern = "\\.RData$")
-  data_list <- lapply(txt_files, function(file) {
-    load(paste0("data/Mus.ATAC/", file))
+  dir <- system.file("extdata","Mus.ATAC",package = "LinkageData")
+  txt_files <- list.files(dir,pattern = "\\.rdata$")
+  path <- file.path(dir,txt_files)
+  data_list <- lapply(path, function(file) {
+    load(file)
     data
   })
   ATAC <- do.call(rbind, data_list)
   return(ATAC)
 }
 
-#' Laod TCGA Breast Cancer RNA-seq expression matrix.
+#' Load TCGA Breast Cancer RNA-seq expression matrix.
 #'
 #' @return RNA-seq count
 #' @export
@@ -43,12 +47,13 @@ MuSCsATAC <- function(){
 #' library(LinkageData)
 #' BreastCancerRNA()
 BreastCancerRNA <- function(){
-  load("data/TCGA-BRCA-RNA.RData")
+  dir <- system.file("extdata","TCGA-BRCA-RNA.rdata",package = "LinkageData")
+  load(dir)
   return(RNA_matrix)
 }
 
 
-#' Laod MuSC RNA-seq expression matrix.
+#' Load MuSC RNA-seq expression matrix.
 #'
 #' @return RNA-seq count
 #' @export
@@ -57,6 +62,7 @@ BreastCancerRNA <- function(){
 #' library(LinkageData)
 #' MuSCsRNA()
 MuSCsRNA <- function(){
-  load("data/mouse.normalize.rna.RData")
+  dir <- system.file("extdata","mouse.normalize.rna.rdata",package = "LinkageData")
+  load(dir)
   return(mouse.RNA_matrix)
 }
